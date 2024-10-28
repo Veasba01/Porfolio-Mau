@@ -1,0 +1,30 @@
+---
+import ExperienceItem from "./ExperienceItem.astro";
+const EXPERIENCE = [
+    {
+        date: "Actualmente",
+        title: "Bolsa de Empleo UNAlumni",
+        description:
+        "Desarrollo de la bolsa de empleo de la Asociación de Egresados de la Universidad Nacional de Costa Rica.",
+        link: "#",
+    },
+    {
+        date: "Enero 2022 - Julio 2023",
+        title: "SOMOS HOJANCHA",
+        description:
+        "Desarrollador Fullstack en el proyecto SOMOS HOJANCHA, una plataforma de información y servicios para la comunidad de Hojancha, Guanacaste.",
+        link: "#",
+    },
+]
+---
+
+<ol class="relative border-s border-gray-200 ml-3">
+    {
+    EXPERIENCE.map(experience => (
+
+    <li class="mb-10 ms-4">
+       <ExperienceItem { ... experience } />
+    </li>
+    ))     
+    }
+</ol>

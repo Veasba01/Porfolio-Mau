@@ -1,0 +1,27 @@
+---
+const PROJECTS =[
+    {
+        title: "Bolsa de Empleo UNAlumni",
+        description: "Desarrollo de la bolsa de empleo de la Asociación de Egresados de la Universidad Nacional de Costa Rica.",
+        link: "#",
+        github: "#",
+        image: "https://via.placeholder.com/300x200",
+        tags: ["React", "TailwindCSS", "NodeJS", "Express", "MongoDB"]
+    }
+]
+---
+
+{
+    PROJECTS.map(project => (
+        <article>
+            <h3>{project.title}</h3>
+            <p>{project.description}</p>
+            <ul>
+                {project.tags.map(tag => (
+                    <li>{tag}</li>
+                ))}
+            </ul>
+            <img src={project.image} alt={`Captura de pantalla del proyecto ${project.image}`}>
+        </article>
+    ))
+}
